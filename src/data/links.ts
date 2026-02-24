@@ -24,10 +24,10 @@ export interface PageData {
 }
 
 export const indexData: PageData = {    
-    header_image: "string",
-    profile_image: "string",
+    header_image: "/images/main_profile_header.jpg",
+    profile_image: "/images/shineburst_logo.png",
     name: "Marco Gonzalez",
-    tagline: "string",
+    tagline: "Developer | Artist | Builder",
     social_links: {
         github : 'false',
         instagram : 'false',
@@ -39,10 +39,10 @@ export const indexData: PageData = {
 }
 
 export const shineburstData: PageData = {
-    header_image: "string",
-    profile_image: "string",
+    header_image: "/images/shineburst_header.jpg",
+    profile_image: "/images/shineburst_logo.png",
     name: "Shineburst",
-    tagline: "string",
+    tagline: "Connecting Others Through Sound",
     social_links: {
         github : 'false',
         instagram : 'false',
@@ -54,10 +54,10 @@ export const shineburstData: PageData = {
 }
 
 export const polarisData: PageData = {
-    header_image: "string",
-    profile_image: "string",
+    header_image: "/images/polaris_studios_header.jpg",
+    profile_image: "/images/polaris_studios_logo.png",
     name: "Polaris Studios",
-    tagline: "string",
+    tagline: "Imagination Going Beyond",
     social_links: {
         github : 'false',
         instagram : 'false',
@@ -69,10 +69,10 @@ export const polarisData: PageData = {
 }
 
 export const skyholdsData: PageData = {
-    header_image: "string",
-    profile_image: "string",
+    header_image: "/images/skyholds_header.jpg",
+    profile_image: "/images/skyholds_logo.png",
     name: "Sky Holds",
-    tagline: "string",
+    tagline: "Always Reaching Higher",
     social_links: {
         github : 'false',
         instagram : 'false',
