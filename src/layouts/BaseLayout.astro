@@ -20,7 +20,7 @@ const { page } = Astro.props
 
     <body>
         <ProfileCard profile_data={page}/>
-        <SocialButtons socials={page.social_links} />
-        {page.cards.map(card => <LinkCard card={card}/>)}
+        <SocialButtons social_links={page.social_links} />
+        <LinkCard cards={page.cards} />
     </body>
 </html>

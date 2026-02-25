@@ -4,6 +4,18 @@ All notable changes to Pathways will be documented here.
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-02-24
+
+### Added
+- `SocialButtons.astro` - Implemented component: renders social icon images from `/images/social/` using `.map()` over a `SocialLink[]` prop, with circular bordered styling
+
+### Updated
+- `src/data/links.ts` - Refactored `SocialLinks` interface into `SocialLink` (singular) with explicit `icon` and `link` fields; updated `social_links` type to `SocialLink[]` across all page data; updated `Card` interface to use `text` and `alt` fields; added real card data to `indexData`; reorganized image paths into subdirectories (`/images/headers/`, `/images/logos/`, `/images/cards/`, `/images/social/`)
+- `LinkCard.astro` - Implemented component: replaced flex layout with responsive CSS Grid (`grid-cols-1 lg:grid-cols-3`), made full card clickable via wrapping `<a>` tag, added text label bar at bottom of each card
+- `BaseLayout.astro` - Updated `LinkCard` usage to pass `cards={page.cards}`
+
+---
+
 ## [0.0.3] - 2026-02-23
 
 ### Updated
@@ -16,7 +28,7 @@ All notable changes to Pathways will be documented here.
 
 ### Added
 - `BaseLayout.astro` - Shared layout component accepting a `PageData` prop, renders profile, social buttons, cards, and section link
-- `src/data/links.ts` - Typed interfaces (`PageData`, `Card`, `SocialLinks`) and data stubs for all four pages (`indexData`, `shineburstData`, `polarisData`, `skyholdsData`)
+- `src/data/links.ts` - Typed interfaces (`PageData`, `Card`, `SocialLink`) and data stubs for all four pages (`indexData`, `shineburstData`, `polarisData`, `skyholdsData`)
 
 
 ## [0.0.1] - 2026-02-21

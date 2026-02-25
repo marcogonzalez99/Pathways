@@ -1,10 +1,25 @@
 ---
+import type { Card } from "../data/links"
 import "../styles/global.css"
----
 
-<div class="grid gap-4 sm:grid-cols-2">
-    <div class="bg-white p-6 rounded-lg text-black">Card 1</div>
-    <div class="bg-white p-6 rounded-lg text-black">Card 2</div>
-    <div class="bg-white p-6 rounded-lg text-black">Card 3</div>
-    <div class="bg-white p-6 rounded-lg text-black">Card 4</div>
+interface Props {
+    cards: Card[]
+}
+const { cards } = Astro.props
+---
+<div class="flex flex-wrap justify-center items-center mt-8">
+    <ul class="grid grid-cols-1 lg:grid-cols-3 gap-12 ml-4 mr-4">
+        {cards.map((link) => (
+            <li>
+                <a href={link.link} target="_blank" rel="noopener noreferrer">
+                    <div>
+                        <img src={link.image} alt={link.alt} class="w-124 h-64 rounded-t-4xl border-2 border-stone-700 dark:border-neutral-500 object-cover"/>
+                    </div>
+                    <div class="h-12 rounded-b-4xl border-2 border-stone-700 dark:border-neutral-500 flex items-center justify-center">
+                        <p>{link.text}</p>
+                    </div>
+                </a>
+            </li>
+        ))}
+    </ul>
 </div>
