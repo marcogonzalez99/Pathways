@@ -4,6 +4,16 @@ All notable changes to Pathways will be documented here.
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-02-26
+
+### Updated
+- `README.md` - Updated Features list to accurately reflect the project's specific implementation.
+- Cleaned up Final Design section; converted "Other Potential tabs" to a proper Roadmap section.
+- Added banner image at top
+- Merged and expanded "What is Pathways?" to cover both what and why; added Project Structure tree
+
+---
+
 ## [0.1.0] - 2026-02-24
 
 ### Added
