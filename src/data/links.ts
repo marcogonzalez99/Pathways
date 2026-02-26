@@ -65,7 +65,26 @@ export const shineburstData: PageData = {
         {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez'},
         {icon: 'linkedin', link: 'https://www.linkedin.com/in/marco-a-gonzalez99/'}
     ],
-    cards: [],
+    cards: [
+        {    
+            image: "/images/cards/shineburst_card.jpg",
+            text: "Listen to my Music!",
+            alt: "Shineburst on Apple Music",
+            link: "https://music.apple.com/us/artist/shineburst/1559045496"
+        },
+        {    
+            image: "/images/cards/shineburst_card.jpg",
+            text: "Check out My Game Engine!",
+            alt: "Polaris Kit Game Engine",
+            link: "https://ko-fi.com/s/523b453cae"
+        },
+        {    
+            image: "/images/cards/shineburst_card.jpg",
+            text: "Watch me Climb to a V8!",
+            alt: "Sky Holds Instagram Page",
+            link: "https://www.instagram.com/sky.holds/"
+        }   
+    ],
     section_label: "string",
     section_link: "string"
 }
@@ -80,7 +99,26 @@ export const polarisData: PageData = {
         {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez'},
         {icon: 'linkedin', link: 'https://www.linkedin.com/in/marco-a-gonzalez99/'}
     ],
-    cards: [],
+    cards: [
+        {    
+            image: "/images/cards/shineburst_card.jpg",
+            text: "Listen to my Music!",
+            alt: "Shineburst on Apple Music",
+            link: "https://music.apple.com/us/artist/shineburst/1559045496"
+        },
+        {    
+            image: "/images/cards/shineburst_card.jpg",
+            text: "Check out My Game Engine!",
+            alt: "Polaris Kit Game Engine",
+            link: "https://ko-fi.com/s/523b453cae"
+        },
+        {    
+            image: "/images/cards/shineburst_card.jpg",
+            text: "Watch me Climb to a V8!",
+            alt: "Sky Holds Instagram Page",
+            link: "https://www.instagram.com/sky.holds/"
+        }   
+    ],
     section_label: "string",
     section_link: "string"
 }
@@ -95,7 +133,26 @@ export const skyholdsData: PageData = {
         {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez'},
         {icon: 'linkedin', link: 'https://www.linkedin.com/in/marco-a-gonzalez99/'}
     ],
-    cards: [],
+    cards: [
+        {    
+            image: "/images/cards/shineburst_card.jpg",
+            text: "Listen to my Music!",
+            alt: "Shineburst on Apple Music",
+            link: "https://music.apple.com/us/artist/shineburst/1559045496"
+        },
+        {    
+            image: "/images/cards/shineburst_card.jpg",
+            text: "Check out My Game Engine!",
+            alt: "Polaris Kit Game Engine",
+            link: "https://ko-fi.com/s/523b453cae"
+        },
+        {    
+            image: "/images/cards/shineburst_card.jpg",
+            text: "Watch me Climb to a V8!",
+            alt: "Sky Holds Instagram Page",
+            link: "https://www.instagram.com/sky.holds/"
+        }   
+    ],
     section_label: "string",
     section_link: "string"
 }
