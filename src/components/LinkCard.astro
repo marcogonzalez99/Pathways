@@ -11,7 +11,7 @@ const { cards } = Astro.props
     <ul class="grid grid-cols-1 lg:grid-cols-3 gap-12 ml-4 mr-4">
         {cards.map((link) => (
             <li>
-                <a href={link.link} target="_blank" rel="noopener noreferrer">
+                <a href={link.link} target="_blank" rel="noopener noreferrer" class="hover:scale-105">
                     <div>
                         <img src={link.image} alt={link.alt} class="w-124 h-64 rounded-t-4xl border-2 border-stone-700 dark:border-neutral-500 object-cover"/>
                     </div>

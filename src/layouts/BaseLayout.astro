@@ -3,6 +3,7 @@ import type { PageData } from '../data/links'
 import ProfileCard from '../components/ProfileCard.astro'
 import SocialButtons from '../components/SocialButtons.astro'
 import LinkCard from '../components/LinkCard.astro'
+import Sections from '../components/Sections.astro'
 
 import '../styles/global.css'
 
@@ -22,5 +23,6 @@ const { page } = Astro.props
         <ProfileCard profile_data={page}/>
         <SocialButtons social_links={page.social_links} />
         <LinkCard cards={page.cards} />
+        <Sections sections={page.sections} />
     </body>
 </html>

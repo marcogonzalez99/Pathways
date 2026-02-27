@@ -10,6 +10,11 @@ export interface Card {
     link: string
 }
 
+export interface Section {
+    text: string
+    link: string
+}
+
 export interface PageData {
     header_image: string
     profile_image: string
@@ -17,8 +22,7 @@ export interface PageData {
     tagline: string
     social_links: SocialLink[]
     cards: Card[]
-    section_label: string
-    section_link: string
+    sections: Section[]
 }
 
 export const indexData: PageData = {    
@@ -51,8 +55,11 @@ export const indexData: PageData = {
             link: "https://www.instagram.com/sky.holds/"
         }   
     ],
-    section_label: "string",
-    section_link: "string"
+    sections: [
+        {text: "Shineburst", link: "/shineburst"},
+        {text: "Polaris Studios", link: "/polaris"},
+        {text: "Sky Holds", link: "/skyholds"}
+    ]
 }
 
 export const shineburstData: PageData = {
@@ -61,9 +68,7 @@ export const shineburstData: PageData = {
     name: "Shineburst",
     tagline: "Connecting Others Through Sound",
     social_links: [
-        {icon: 'github', link: 'https://github.com/marcogonzalez99'},       
         {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez'},
-        {icon: 'linkedin', link: 'https://www.linkedin.com/in/marco-a-gonzalez99/'}
     ],
     cards: [
         {    
@@ -85,8 +90,11 @@ export const shineburstData: PageData = {
             link: "https://www.instagram.com/sky.holds/"
         }   
     ],
-    section_label: "string",
-    section_link: "string"
+    sections: [
+        {text: "Personal", link: "/"},
+        {text: "Polaris Studios", link: "/polaris"},
+        {text: "Sky Holds", link: "/skyholds"}
+    ]
 }
 
 export const polarisData: PageData = {
@@ -96,7 +104,6 @@ export const polarisData: PageData = {
     tagline: "Imagination Going Beyond",
     social_links: [
         {icon: 'github', link: 'https://github.com/marcogonzalez99'},       
-        {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez'},
         {icon: 'linkedin', link: 'https://www.linkedin.com/in/marco-a-gonzalez99/'}
     ],
     cards: [
@@ -119,8 +126,11 @@ export const polarisData: PageData = {
             link: "https://www.instagram.com/sky.holds/"
         }   
     ],
-    section_label: "string",
-    section_link: "string"
+    sections: [
+        {text: "Personal", link: "/"},
+        {text: "Shineburst", link: "/shineburst"},
+        {text: "Sky Holds", link: "/skyholds"}
+    ]
 }
 
 export const skyholdsData: PageData = {
@@ -129,9 +139,7 @@ export const skyholdsData: PageData = {
     name: "Sky Holds",
     tagline: "Always Reaching Higher",
     social_links: [
-        {icon: 'github', link: 'https://github.com/marcogonzalez99'},       
         {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez'},
-        {icon: 'linkedin', link: 'https://www.linkedin.com/in/marco-a-gonzalez99/'}
     ],
     cards: [
         {    
@@ -153,6 +161,9 @@ export const skyholdsData: PageData = {
             link: "https://www.instagram.com/sky.holds/"
         }   
     ],
-    section_label: "string",
-    section_link: "string"
+    sections: [
+        {text: "Personal", link: "/"},
+        {text: "Shineburst", link: "/shineburst"},
+        {text: "Polaris Studios", link: "/polaris"}
+    ]
 }

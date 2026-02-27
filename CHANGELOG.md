@@ -4,6 +4,18 @@ All notable changes to Pathways will be documented here.
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-02-27
+
+### Added
+- `Section` interface in `src/data/links.ts` | typed interface with `text` and `link` fields
+- `Sections.astro` | New component wired into `BaseLayout.astro` via `sections={page.sections}`
+
+### Updated
+- `src/data/links.ts` | replaced flat `section_label`/`section_link` strings in `PageData` with `sections: Section[]`, customized `social_links` per page to reflect each account's actual platforms; customized `sections` per page so each page links to the other three and excludes itself
+- `LinkCard.astro` | Added `hover:scale-105` transition effect on card hover
+
+---
+
 ## [0.1.1] - 2026-02-26
 
 ### Updated

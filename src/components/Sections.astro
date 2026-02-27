@@ -1,0 +1,20 @@
+---
+import type { Section } from "../data/links"
+import "../styles/global.css"
+
+interface Props {
+    sections: Section[]
+}
+const { sections } = Astro.props
+---
+<div class="flex justify-center items-center">
+    <ul class="flex space-x-4">
+        {sections.map((section) => (
+            <li>
+                <a href={section.link} target="_blank" rel="noopener noreferrer">
+                    <span class="text-lg font-semibold text-stone-800 dark:text-neutral-200 hover:text-stone-600 dark:hover:text-neutral-400 transition-colors duration-300">{section.text}</span>
+                </a>
+            </li>
+        ))}
+    </ul>
+</div>
