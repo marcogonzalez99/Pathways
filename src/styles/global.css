@@ -2,8 +2,16 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Color Schemes */
 :root {
   color-scheme: light dark;
+  --color-bg: #F7F7F5;
+  --color-profile-border: #FFFFFF;
+}
+
+:root.dark {
+  --color-bg: #212326;
+  --color-profile-border: #2B2B2B;
 }
 
 html {

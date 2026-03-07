@@ -4,6 +4,15 @@ All notable changes to Pathways will be documented here.
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-03-07
+
+### Updated
+- `ProfileCard.astro` - Profile image border now uses `--color-profile-border`
+- `SocialButtons.astro` - Social icon `alt` and `title` attributes now use `link.label`
+- `BaseLayout.astro` - Dark mode toggle now correctly shows only the relevant icon (`🌙` in light, `☀️` in dark) using `dark:hidden` / `hidden dark:inline`
+- `src/data/links.ts` - Added `label` field to `SocialLink` interface; populated labels across all four page data objects
+- `src/styles/global.css` - Added `--color-profile-border` CSS variable for light (`#FFFFFF`) and dark (`#2B2B2B`) modes
+
 ## [0.2] - 2026-03-06
 
 ### Added

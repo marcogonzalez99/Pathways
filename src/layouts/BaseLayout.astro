@@ -28,14 +28,14 @@ const { page } = Astro.props
     </script>
 </head>
 
-<body class="bg-[#F7F7F5] dark:bg-[#212326]">
+<body class="bg-(--color-bg)">
     <ProfileCard profile_data={page}/>
     <SocialButtons social_links={page.social_links} />
     <LinkCard cards={page.cards} />
     <Sections sections={page.sections} />
     <button id="theme-toggle" class="fixed top-4 right-4 p-2 rounded">
-        <span id="theme-toggle-dark-icon">🌙</span>
-        <span id="theme-toggle-light-icon">☀️</span>
+        <span id="theme-toggle-dark-icon" class="dark:hidden">🌙</span>
+        <span id="theme-toggle-light-icon" class="hidden dark:inline">☀️</span>
     </button>
 </body>
 </html>

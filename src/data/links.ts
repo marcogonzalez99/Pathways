@@ -1,6 +1,7 @@
 export interface SocialLink {
     icon: string
     link: string
+    label: string
 }
 
 export interface Card {
@@ -31,9 +32,9 @@ export const indexData: PageData = {
     name: "Marco Gonzalez",
     tagline: "Developer | Artist | Builder",
     social_links: [
-        {icon: 'github', link: 'https://github.com/marcogonzalez99'},       
-        {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez'},
-        {icon: 'linkedin', link: 'https://www.linkedin.com/in/marco-a-gonzalez99/'}
+        {icon: 'github', link: 'https://github.com/marcogonzalez99', label: 'GitHub'},       
+        {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez', label: 'Instagram'},
+        {icon: 'linkedin', link: 'https://www.linkedin.com/in/marco-a-gonzalez99/', label: 'LinkedIn'}
     ],
     cards: [
         {    
@@ -68,7 +69,7 @@ export const shineburstData: PageData = {
     name: "Shineburst",
     tagline: "Connecting Others Through Sound",
     social_links: [
-        {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez'},
+        {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez', label: 'Instagram'},
     ],
     cards: [
         {    
@@ -103,8 +104,8 @@ export const polarisData: PageData = {
     name: "Polaris Studios",
     tagline: "Imagination Going Beyond",
     social_links: [
-        {icon: 'github', link: 'https://github.com/marcogonzalez99'},       
-        {icon: 'linkedin', link: 'https://www.linkedin.com/in/marco-a-gonzalez99/'}
+        {icon: 'github', link: 'https://github.com/marcogonzalez99', label: 'GitHub'},       
+        {icon: 'linkedin', link: 'https://www.linkedin.com/in/marco-a-gonzalez99/', label: 'LinkedIn'}
     ],
     cards: [
         {    
@@ -139,7 +140,7 @@ export const skyholdsData: PageData = {
     name: "Sky Holds",
     tagline: "Always Reaching Higher",
     social_links: [
-        {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez'},
+        {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez', label: 'Instagram'},
     ],
     cards: [
         {    

@@ -8,11 +8,11 @@ interface Props {
 const { social_links } = Astro.props
 ---
 <div class="flex justify-center items-center">
-    <ul class="flex space-x-4">
+    <ul class="flex space-x-4 list-none">
         {social_links.map((link) => (
-            <li>
+            <li class="hover:scale-110 hover:rotate-14 transition-transform duration-200">
                 <a href={link.link} target="_blank" rel="noopener noreferrer">
-                    <img src={`/images/social/${link.icon}.png`} alt={link.icon} class="w-12 h-12 rounded-full border-2 border-stone-700 dark:border-neutral-600 object-cover"/>
+                    <img src={`/images/social/${link.icon}.png`} alt={link.label} title={link.label} class="w-12 h-12 rounded-full object-cover hover:ring-2 hover:ring-stone-400 transition-all duration-200"/>
                 </a>
             </li>
         ))}
