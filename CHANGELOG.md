@@ -4,6 +4,13 @@ All notable changes to Pathways will be documented here.
 
 ## [Unreleased]
 
+## [0.2] - 2026-03-06
+
+### Added
+- Dark Mode temporary toggle
+
+
+---
 ## [0.1.2] - 2026-02-27
 
 ### Added
