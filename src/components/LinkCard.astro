@@ -7,16 +7,16 @@ interface Props {
 }
 const { cards } = Astro.props
 ---
-<div class="flex flex-wrap justify-center items-center mt-8">
-    <ul class="grid grid-cols-1 lg:grid-cols-3 gap-12 ml-4 mr-4">
+<div class="mt-2 p-4">
+    <ul class="flex flex-wrap justify-center items-center gap-8">
         {cards.map((link) => (
-            <li>
+            <li class="hover:scale-105 hover:rotate-1 transition-transform duration-200">
                 <a href={link.link} target="_blank" rel="noopener noreferrer" class="hover:scale-105">
                     <div>
                         <img src={link.image} alt={link.alt} class="w-124 h-64 rounded-t-4xl border-2 border-stone-700 dark:border-neutral-500 object-cover"/>
                     </div>
                     <div class="h-12 rounded-b-4xl border-2 border-stone-700 dark:border-neutral-500 flex items-center justify-center">
-                        <p>{link.text}</p>
+                        <p class="text-xl font-semibold text-(--color-text-main)">{link.text}</p>
                     </div>
                 </a>
             </li>

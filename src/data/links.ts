@@ -12,6 +12,7 @@ export interface Card {
 }
 
 export interface Section {
+    icon: string
     text: string
     link: string
 }
@@ -57,9 +58,9 @@ export const indexData: PageData = {
         }   
     ],
     sections: [
-        {text: "Shineburst", link: "/shineburst"},
-        {text: "Polaris Studios", link: "/polaris"},
-        {text: "Sky Holds", link: "/skyholds"}
+        {icon:"/images/logos/shineburst_logo.png", text: "Shineburst", link: "/shineburst"},
+        {icon:"/images/logos/polaris_studios_logo.png", text: "Polaris Studios", link: "/polaris"},
+        {icon:"/images/logos/skyholds_logo.png", text: "Sky Holds", link: "/skyholds"}
     ]
 }
 
@@ -74,27 +75,27 @@ export const shineburstData: PageData = {
     cards: [
         {    
             image: "/images/cards/shineburst_card.jpg",
-            text: "Listen to my Music!",
+            text: "Follow Me On Spotify!",
             alt: "Shineburst on Apple Music",
             link: "https://music.apple.com/us/artist/shineburst/1559045496"
         },
         {    
             image: "/images/cards/shineburst_card.jpg",
-            text: "Check out My Game Engine!",
+            text: "Check Out My Visualizers",
             alt: "Polaris Kit Game Engine",
             link: "https://ko-fi.com/s/523b453cae"
         },
         {    
             image: "/images/cards/shineburst_card.jpg",
-            text: "Watch me Climb to a V8!",
+            text: "Listen On Apple Music!",
             alt: "Sky Holds Instagram Page",
             link: "https://www.instagram.com/sky.holds/"
         }   
     ],
     sections: [
-        {text: "Personal", link: "/"},
-        {text: "Polaris Studios", link: "/polaris"},
-        {text: "Sky Holds", link: "/skyholds"}
+        {icon:"/images/logos/main_logo.png", text: "Personal", link: "/"},
+        {icon:"/images/logos/polaris_studios_logo.png", text: "Polaris Studios", link: "/polaris"},
+        {icon:"/images/logos/skyholds_logo.png", text: "Sky Holds", link: "/skyholds"}
     ]
 }
 
@@ -104,13 +105,13 @@ export const polarisData: PageData = {
     name: "Polaris Studios",
     tagline: "Imagination Going Beyond",
     social_links: [
-        {icon: 'github', link: 'https://github.com/marcogonzalez99', label: 'GitHub'},       
-        {icon: 'linkedin', link: 'https://www.linkedin.com/in/marco-a-gonzalez99/', label: 'LinkedIn'}
+        {icon: 'github', link: 'https://github.com/marcogonzalez99', label: 'GitHub'},  
+        {icon: 'instagram', link: 'https://www.instagram.com/sbstudios.project', label: 'Instagram'},     
     ],
     cards: [
         {    
             image: "/images/cards/shineburst_card.jpg",
-            text: "Listen to my Music!",
+            text: "Support me on Kofi!",
             alt: "Shineburst on Apple Music",
             link: "https://music.apple.com/us/artist/shineburst/1559045496"
         },
@@ -122,15 +123,15 @@ export const polarisData: PageData = {
         },
         {    
             image: "/images/cards/shineburst_card.jpg",
-            text: "Watch me Climb to a V8!",
+            text: "Follow Dev Builds!",
             alt: "Sky Holds Instagram Page",
             link: "https://www.instagram.com/sky.holds/"
         }   
     ],
     sections: [
-        {text: "Personal", link: "/"},
-        {text: "Shineburst", link: "/shineburst"},
-        {text: "Sky Holds", link: "/skyholds"}
+        {icon:"/images/logos/main_logo.png", text: "Personal", link: "/"},
+        {icon:"/images/logos/shineburst_logo.png", text: "Shineburst", link: "/shineburst"},
+        {icon:"/images/logos/skyholds_logo.png", text: "Sky Holds", link: "/skyholds"}
     ]
 }
 
@@ -145,26 +146,26 @@ export const skyholdsData: PageData = {
     cards: [
         {    
             image: "/images/cards/shineburst_card.jpg",
-            text: "Listen to my Music!",
+            text: "Watch My Shorts!",
             alt: "Shineburst on Apple Music",
             link: "https://music.apple.com/us/artist/shineburst/1559045496"
         },
         {    
             image: "/images/cards/shineburst_card.jpg",
-            text: "Check out My Game Engine!",
+            text: "(Insert Sponsorship Here)",
             alt: "Polaris Kit Game Engine",
             link: "https://ko-fi.com/s/523b453cae"
         },
         {    
             image: "/images/cards/shineburst_card.jpg",
-            text: "Watch me Climb to a V8!",
+            text: "Watch My First V7!",
             alt: "Sky Holds Instagram Page",
             link: "https://www.instagram.com/sky.holds/"
         }   
     ],
     sections: [
-        {text: "Personal", link: "/"},
-        {text: "Shineburst", link: "/shineburst"},
-        {text: "Polaris Studios", link: "/polaris"}
+        {icon:"/images/logos/main_logo.png", text: "Personal", link: "/"},
+        {icon:"/images/logos/shineburst_logo.png", text: "Shineburst", link: "/shineburst"},
+        {icon:"/images/logos/polaris_studios_logo.png", text: "Polaris Studios", link: "/polaris"}
     ]
 }

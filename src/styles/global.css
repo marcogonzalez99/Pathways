@@ -5,13 +5,25 @@
 /* Color Schemes */
 :root {
   color-scheme: light dark;
-  --color-bg: #F7F7F5;
-  --color-profile-border: #FFFFFF;
+  --color-bg: #F2F0EF;
+  --color-profile-border: #F2F0EF;
+
+  --color-text-main: #212326;
+  --color-text-secondary: #212326;
+  --color-ring-hover: #323841;
+
+  --color-bg-dark: #F2F0EF;
 }
 
 :root.dark {
   --color-bg: #212326;
-  --color-profile-border: #2B2B2B;
+  --color-profile-border: #212326;
+  
+  --color-text-main: #F2F0EF;
+  --color-text-secondary: #F2F0EF;
+  --color-ring-hover: #323841;
+  
+  --color-bg-dark: #F2F0EF;
 }
 
 html {

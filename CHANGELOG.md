@@ -4,7 +4,22 @@ All notable changes to Pathways will be documented here.
 
 ## [Unreleased]
 
-## [0.2.1] - 2026-03-07
+## [0.9.0] - 2026-03-08
+
+### Removed
+- Old Linkedin Logo
+
+### Updated
+- `LinkCard.astro` - Added hover effects, changed text color to match dark/light mode
+- `ProfileCard.astro` - Added `DarkMode` component. Updated Profile Image size. Added variables for styling
+- `Sections.astro` - Updated component to use hover effects, scaling and variable styling from `global.css`. Added a flex grid for both mobile and desktop usage
+- `SocialButtons.astro` - Updated hover effects
+
+### Added
+- `DarkMode` - Added new component to store Dark Mode UI
+- New Linkedin Logo
+
+## [0.8.0] - 2026-03-07
 
 ### Updated
 - `ProfileCard.astro` - Profile image border now uses `--color-profile-border`
@@ -13,14 +28,14 @@ All notable changes to Pathways will be documented here.
 - `src/data/links.ts` - Added `label` field to `SocialLink` interface; populated labels across all four page data objects
 - `src/styles/global.css` - Added `--color-profile-border` CSS variable for light (`#FFFFFF`) and dark (`#2B2B2B`) modes
 
-## [0.2] - 2026-03-06
+## [0.7.0] - 2026-03-06
 
 ### Added
 - Dark Mode temporary toggle
 
 
 ---
-## [0.1.2] - 2026-02-27
+## [0.6.0] - 2026-02-27
 
 ### Added
 - `Section` interface in `src/data/links.ts` | typed interface with `text` and `link` fields
@@ -32,7 +47,7 @@ All notable changes to Pathways will be documented here.
 
 ---
 
-## [0.1.1] - 2026-02-26
+## [0.5.0] - 2026-02-26
 
 ### Updated
 - `README.md` - Updated Features list to accurately reflect the project's specific implementation.
@@ -42,7 +57,7 @@ All notable changes to Pathways will be documented here.
 
 ---
 
-## [0.1.0] - 2026-02-24
+## [0.4.0] - 2026-02-24
 
 ### Added
 - `SocialButtons.astro` - Implemented component: renders social icon images from `/images/social/` using `.map()` over a `SocialLink[]` prop, with circular bordered styling
@@ -54,7 +69,7 @@ All notable changes to Pathways will be documented here.
 
 ---
 
-## [0.0.3] - 2026-02-23
+## [0.3.0] - 2026-02-23
 
 ### Updated
 - `ProfileCard.astro` - Implemented full component: header image, circular profile image overlapping header, name, and tagline
@@ -62,14 +77,14 @@ All notable changes to Pathways will be documented here.
 
 ---
 
-## [0.0.2] - 2026-02-22
+## [0.2.0] - 2026-02-22
 
 ### Added
 - `BaseLayout.astro` - Shared layout component accepting a `PageData` prop, renders profile, social buttons, cards, and section link
 - `src/data/links.ts` - Typed interfaces (`PageData`, `Card`, `SocialLink`) and data stubs for all four pages (`indexData`, `shineburstData`, `polarisData`, `skyholdsData`)
 
 
-## [0.0.1] - 2026-02-21
+## [0.1.0] - 2026-02-21
 
 ### Added
 - Initial Astro project setup with Tailwind CSS

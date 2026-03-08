@@ -7,12 +7,13 @@ interface Props {
 }
 const { sections } = Astro.props
 ---
-<div class="flex justify-center items-center">
-    <ul class="flex space-x-4">
+<div class="flex flex-wrap justify-center items-center mt-8">
+    <ul class="grid grid-cols-1 lg:grid-cols-3 gap-4 ml-4 mr-4">
         {sections.map((section) => (
-            <li>
-                <a href={section.link} target="_blank" rel="noopener noreferrer">
-                    <span class="text-lg font-semibold text-stone-800 dark:text-neutral-200 hover:text-stone-600 dark:hover:text-neutral-400 transition-colors duration-300">{section.text}</span>
+            <li class="hover:scale-120 hover:rotate-2 transition-transform duration-200">
+                <a href={section.link} target="_blank" rel="noopener noreferrer" class="flex flex-wrap justify-center items-center space-x-2">
+                    <img src={section.icon} alt={section.text} title={section.text} class="w-12 h-12 rounded-full object-cover transition-all duration-200 mb-2"/>
+                    <span class="text-2xl font-semibold text-(--color-text-main)">{section.text}</span>
                 </a>
             </li>
         ))}
