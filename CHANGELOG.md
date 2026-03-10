@@ -4,6 +4,13 @@ All notable changes to Pathways will be documented here.
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-03-09
+
+### Added
+- Card images to `public/images/cards/` (`apple_music.jpg`, `instagram.png`, `kofi.png`, `polaris.png`, `spotify.jpg`, `youtube.jpg`)
+
+---
+
 ## [0.9.0] - 2026-03-08
 
 ### Removed

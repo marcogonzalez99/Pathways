@@ -39,19 +39,19 @@ export const indexData: PageData = {
     ],
     cards: [
         {    
-            image: "/images/cards/shineburst_card.jpg",
+            image: "/images/cards/apple_music.jpg",
             text: "Listen to my Music!",
             alt: "Shineburst on Apple Music",
             link: "https://music.apple.com/us/artist/shineburst/1559045496"
         },
         {    
-            image: "/images/cards/shineburst_card.jpg",
+            image: "/images/cards/polaris.png",
             text: "Check out My Game Engine!",
             alt: "Polaris Kit Game Engine",
             link: "https://ko-fi.com/s/523b453cae"
         },
         {    
-            image: "/images/cards/shineburst_card.jpg",
+            image: "/images/cards/instagram.png",
             text: "Watch me Climb to a V8!",
             alt: "Sky Holds Instagram Page",
             link: "https://www.instagram.com/sky.holds/"
@@ -74,22 +74,22 @@ export const shineburstData: PageData = {
     ],
     cards: [
         {    
-            image: "/images/cards/shineburst_card.jpg",
+            image: "/images/cards/spotify.jpg",
             text: "Follow Me On Spotify!",
+            alt: "Shineburst on Spotify",
+            link: "https://open.spotify.com/artist/2dsDkMLqRajMnPomQNYs1B"
+        },
+        {    
+            image: "/images/cards/youtube.jpg",
+            text: "Check Out My Visualizers",
+            alt: "Shineburst on YouTube",
+            link: "https://www.youtube.com/@Shineburst/shorts"
+        },
+        {    
+            image: "/images/cards/apple_music.jpg",
+            text: "Listen On Apple Music!",
             alt: "Shineburst on Apple Music",
             link: "https://music.apple.com/us/artist/shineburst/1559045496"
-        },
-        {    
-            image: "/images/cards/shineburst_card.jpg",
-            text: "Check Out My Visualizers",
-            alt: "Polaris Kit Game Engine",
-            link: "https://ko-fi.com/s/523b453cae"
-        },
-        {    
-            image: "/images/cards/shineburst_card.jpg",
-            text: "Listen On Apple Music!",
-            alt: "Sky Holds Instagram Page",
-            link: "https://www.instagram.com/sky.holds/"
         }   
     ],
     sections: [
@@ -110,22 +110,22 @@ export const polarisData: PageData = {
     ],
     cards: [
         {    
-            image: "/images/cards/shineburst_card.jpg",
+            image: "/images/cards/kofi.png",
             text: "Support me on Kofi!",
-            alt: "Shineburst on Apple Music",
-            link: "https://music.apple.com/us/artist/shineburst/1559045496"
+            alt: "Polaris Studios on Ko-fi",
+            link: "https://ko-fi.com/sbstudios"
         },
         {    
-            image: "/images/cards/shineburst_card.jpg",
+            image: "/images/cards/polaris.png",
             text: "Check out My Game Engine!",
             alt: "Polaris Kit Game Engine",
             link: "https://ko-fi.com/s/523b453cae"
         },
         {    
-            image: "/images/cards/shineburst_card.jpg",
+            image: "/images/cards/youtube.jpg",
             text: "Follow Dev Builds!",
-            alt: "Sky Holds Instagram Page",
-            link: "https://www.instagram.com/sky.holds/"
+            alt: "Polaris Studios Youtube Page",
+            link: "https://www.youtube.com/@SBStudiosProject/shorts"
         }   
     ],
     sections: [
@@ -145,23 +145,23 @@ export const skyholdsData: PageData = {
     ],
     cards: [
         {    
-            image: "/images/cards/shineburst_card.jpg",
+            image: "/images/cards/youtube.jpg",
             text: "Watch My Shorts!",
-            alt: "Shineburst on Apple Music",
-            link: "https://music.apple.com/us/artist/shineburst/1559045496"
+            alt: "Sky Holds Youtube Page",
+            link: "https://www.youtube.com/@SkyHoldsYT/shorts"
         },
         {    
-            image: "/images/cards/shineburst_card.jpg",
-            text: "(Insert Sponsorship Here)",
-            alt: "Polaris Kit Game Engine",
-            link: "https://ko-fi.com/s/523b453cae"
-        },
-        {    
-            image: "/images/cards/shineburst_card.jpg",
+            image: "/images/cards/instagram.png",
             text: "Watch My First V7!",
-            alt: "Sky Holds Instagram Page",
-            link: "https://www.instagram.com/sky.holds/"
-        }   
+            alt: "Sky Holds V7 Climb",
+            link: "https://www.youtube.com/shorts/N1xXPxFUowQ"
+        },
+        {    
+            image: "/images/cards/instagram.png",
+            text: "Random Climb!",
+            alt: "Sky Holds Random Short",
+            link: "https://www.youtube.com/shorts/GtADGUb_SKo"
+        },
     ],
     sections: [
         {icon:"/images/logos/main_logo.png", text: "Personal", link: "/"},

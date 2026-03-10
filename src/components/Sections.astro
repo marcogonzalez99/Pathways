@@ -11,7 +11,7 @@ const { sections } = Astro.props
     <ul class="grid grid-cols-1 lg:grid-cols-3 gap-4 ml-4 mr-4">
         {sections.map((section) => (
             <li class="hover:scale-120 hover:rotate-2 transition-transform duration-200">
-                <a href={section.link} target="_blank" rel="noopener noreferrer" class="flex flex-wrap justify-center items-center space-x-2">
+                <a href={section.link} target="_self" rel="noopener noreferrer" class="flex flex-wrap justify-center items-center space-x-2">
                     <img src={section.icon} alt={section.text} title={section.text} class="w-12 h-12 rounded-full object-cover transition-all duration-200 mb-2"/>
                     <span class="text-2xl font-semibold text-(--color-text-main)">{section.text}</span>
                 </a>

@@ -25,8 +25,10 @@ Live Site link will go here once it's ready -->
 ```
 src/
 ├── components/
+│   ├── DarkMode.astro
 │   ├── LinkCard.astro
 │   ├── ProfileCard.astro
+│   ├── Sections.astro
 │   └── SocialButtons.astro
 ├── data/
 │   └── links.ts
@@ -39,6 +41,12 @@ src/
 │   └── polaris.astro
 └── styles/
     └── global.css
+public/
+└── images/
+    ├── cards/
+    ├── headers/
+    ├── logos/
+    └── social/
 ```
 
 ## 📦 Built With
