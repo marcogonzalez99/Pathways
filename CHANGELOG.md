@@ -4,6 +4,20 @@ All notable changes to Pathways will be documented here.
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-03-14
+
+### Added
+- `ClientRouter` from `astro:transitions` to `BaseLayout.astro` for client-side page transitions
+- `@keyframes fade-up` animation in `global.css`
+- `fade-up` entrance animations on `LinkCard.astro`, `SocialButtons.astro`, and `Sections.astro`
+- `transition:name` on header and profile images in `ProfileCard.astro` for element morphing between pages
+- `description` field to `PageData` interface in `links.ts`
+
+### Removed
+- Unused `--color-bg-dark` CSS from `global.css`
+
+---
+
 ## [1.0.0] - 2026-03-09
 
 ### Added

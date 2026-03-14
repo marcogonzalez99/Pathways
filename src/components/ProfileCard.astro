@@ -2,8 +2,6 @@
 import type { PageData } from "../data/links"
 import "../styles/global.css"
 
-import DarkMode from "./DarkMode.astro"
-
 interface Props { 
     profile_data: PageData 
 }
@@ -12,16 +10,15 @@ const { profile_data } = Astro.props
 
 <div class="relative">
   <div class="h-56 overflow-hidden">
-    <img src={profile_data.header_image} class="w-full h-full object-cover"/>
+    <img src={profile_data.header_image} transition:name="header-image" alt="Header Image" class="w-full h-full object-cover"/>
   </div>
   <div class="absolute bottom-10 left-1/2 -translate-x-1/2 translate-y-1/2 z-10">
-    <img src={profile_data.profile_image} class="w-48 h-48 rounded-full border-4 border-(--color-profile-border) object-cover"/>
+    <img src={profile_data.profile_image} transition:name="profile-image" alt="Profile Image" class="w-48 h-48 rounded-full border-4 border-(--color-profile-border) object-cover"/>
   </div>
 </div>
 <div class="text-center mt-14 px-4 pb-2">
   <span class="flex items-center justify-center space-x-4">
     <h1 class="text-6xl font-bold text-(--color-text-main)">{profile_data.name}</h1>
-    <DarkMode />
   </span>
   <p class="mt-1 text-xl text-(--color-text-secondary)">{profile_data.tagline}</p>
 </div>

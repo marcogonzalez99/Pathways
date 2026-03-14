@@ -11,8 +11,6 @@
   --color-text-main: #212326;
   --color-text-secondary: #212326;
   --color-ring-hover: #323841;
-
-  --color-bg-dark: #F2F0EF;
 }
 
 :root.dark {
@@ -22,9 +20,20 @@
   --color-text-main: #F2F0EF;
   --color-text-secondary: #F2F0EF;
   --color-ring-hover: #323841;
-  
-  --color-bg-dark: #F2F0EF;
+
 }
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 html {
   scroll-behavior: smooth;

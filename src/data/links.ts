@@ -22,6 +22,7 @@ export interface PageData {
     profile_image: string
     name: string
     tagline: string
+    description: string
     social_links: SocialLink[]
     cards: Card[]
     sections: Section[]
@@ -32,6 +33,7 @@ export const indexData: PageData = {
     profile_image: "/images/logos/main_logo.png",
     name: "Marco Gonzalez",
     tagline: "Developer | Artist | Builder",
+    description: "Welcome to my personal link page! Here you can find all of my projects and social media in one place. Feel free to explore and connect with me!",
     social_links: [
         {icon: 'github', link: 'https://github.com/marcogonzalez99', label: 'GitHub'},       
         {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez', label: 'Instagram'},
@@ -69,6 +71,7 @@ export const shineburstData: PageData = {
     profile_image: "/images/logos/shineburst_logo.png",
     name: "Shineburst",
     tagline: "Connecting Others Through Sound",
+    description: "Shineburst is my music project where I create a blend of electronic and indie music. My goal is to connect with others through my sound and share my passion for music. Check out my latest releases and follow me on Spotify and Apple Music!",
     social_links: [
         {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez', label: 'Instagram'},
     ],
@@ -104,6 +107,7 @@ export const polarisData: PageData = {
     profile_image: "/images/logos/polaris_studios_logo.png",
     name: "Polaris Studios",
     tagline: "Imagination Going Beyond",
+    description: "Polaris Studios is my game development project where I create games and a game engine called Polaris Kit. My goal is to bring imagination to life through interactive experiences. Check out my latest projects and follow me on YouTube for dev builds and updates!",
     social_links: [
         {icon: 'github', link: 'https://github.com/marcogonzalez99', label: 'GitHub'},  
         {icon: 'instagram', link: 'https://www.instagram.com/sbstudios.project', label: 'Instagram'},     
@@ -140,6 +144,7 @@ export const skyholdsData: PageData = {
     profile_image: "/images/logos/skyholds_logo.png",
     name: "Sky Holds",
     tagline: "Always Reaching Higher",
+    description: "Sky Holds is my climbing project where I document my climbing journey and share tips and tricks for climbers of all levels. My goal is to inspire others to reach new heights and push their limits. Check out my latest climbs and follow me on Instagram for updates!",
     social_links: [
         {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez', label: 'Instagram'},
     ],

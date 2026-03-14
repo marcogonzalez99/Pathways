@@ -5,48 +5,54 @@ import ProfileCard from '../components/ProfileCard.astro'
 import SocialButtons from '../components/SocialButtons.astro'
 import LinkCard from '../components/LinkCard.astro'
 import Sections from '../components/Sections.astro'
+import DarkMode from '../components/DarkMode.astro'
 
 import '../styles/global.css'
+
+import { ClientRouter } from "astro:transitions";
 
 interface Props { page: PageData }
 const { page } = Astro.props
 ---
 
-<html>
+<html lang="en">
     <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{page.name}</title>
-    <link rel="icon" href="/favicon.ico" />
-    <script is:inline>
-        // Check local storage for theme 
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content={page.description}/>
+        <title>{page.name}</title>
+        <link rel="icon" href="/favicon.ico" />
+        <ClientRouter />
+        <script is:inline>
+            // Check local storage for theme 
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
 
-    </script>
-</head>
+        </script>
+    </head>
 
-<body class="bg-(--color-bg)">
-    <ProfileCard profile_data={page}/>
-    <SocialButtons social_links={page.social_links} />
-    <LinkCard cards={page.cards} />
-    <Sections sections={page.sections} />
-</body>
+    <body class="bg-(--color-bg)" transition:animate="fade">
+        <ProfileCard profile_data={page}/>
+        <SocialButtons social_links={page.social_links} />
+        <LinkCard cards={page.cards} />
+        <Sections sections={page.sections} />
+        <DarkMode />
+    </body>
 </html>
 
 <script>
     const toggleDarkMode = () => {
         const isDarkMode = document.documentElement.classList.contains('dark');
-        if (isDarkMode) {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-        } else {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');    
-        }
+        document.documentElement.classList.toggle('dark', !isDarkMode);
+        localStorage.setItem('theme', isDarkMode ? 'light' : 'dark');
     };
-    document.getElementById('theme-toggle')?.addEventListener('click', toggleDarkMode);
+
+    document.addEventListener('astro:page-load', () => {
+        const btn = document.getElementById('theme-toggle');
+        btn?.removeEventListener('click', toggleDarkMode);
+        btn?.addEventListener('click', toggleDarkMode);
+    });
 </script>
