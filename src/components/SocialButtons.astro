@@ -11,7 +11,7 @@ const { social_links } = Astro.props
     <ul class="flex space-x-4 list-none">
         {social_links.map((link, index) => (
             <li style={`animation-delay: ${index * 0.1}s`} class="hover:scale-120 hover:rotate-18 transition-transform duration-200 animate-[fade-up_0.4s_ease-out_both]">
-                <a href={link.link} target="_blank" rel="noopener noreferrer">
+                <a href={link.link} aria-label={`${link.label} (Opens in a new tab)`} rel="noopener noreferrer" class="block rounded-full">
                     <img src={`/images/social/${link.icon}.png`} alt={link.label} title={link.label} class="w-12 h-12 rounded-full object-cover transition-all duration-200"/>
                 </a>
             </li>

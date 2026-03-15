@@ -132,3 +132,28 @@ Potential future pathways to add:
 - Baking or astrophotography
 - Projects showcase (PolarisKit, Pong)
 - Blog
+
+## Learnings, Takeaways & Insights
+
+### SEO & Link Sharing
+- `**robots.txt**` - Grants web crawlers (Googlebot for example) permissions to scan and index ths site. `Allow / ` makes all pages from the root onwards crawlable. 
+- **Sitemap** - Improves SEO by providing search engines with a structured map of the site's URLs. This helps search engines discover and index content.
+- **Open Graph & Meta Tags** - Added to `BaseLayout.astro`. When a link is shared on iMessage, Twitter or Discord, the tags added ensure the correct title, description and image are displayed in the preview.
+
+### Accessibility
+- **`focus-visible`** - Adds a glowing ring around a focused element, but only when the user is navigating with a keyboard and not clicking with a mouse. This is useful for accessibility, as it provides a clear visual indicator of which element is currently focused for keyboard users, without adding unnecessary visual noise for mouse users.
+- **`accent_color` in `PageData`** - Each Pathway was given its own accent color, which is used for the focus ring, and in the future will be used for background particles and other small details.  
+- **`aria-label`** - Provides labels for screen readers, which improves accessibility for users with visual impairments.
+
+### Image Optimization
+- **`loading="lazy"`** - The LinkCard component's images are set to lazy load. This means they are skipped on initial load, and are only loaded as they scroll into view 
+- **`loading="eager"`** - The hero image and the profile image are set to eager load, meaining they will load as soon as possible. This is important for these two images as they are guarenteed to be in the viewport as soon as the page loads.
+- **`decoding="async"`** - Image decoding is set to async, which allows a browser to render other content while the image is being decoded, improving page load performance.
+
+## 📋 Future TODOs
+
+- **Custom Cursor** — a two-layer JS cursor: small dot that snaps instantly + larger ring that follows with lag, themed with `var(--accent-color)` per pathway.
+- **Particle Background** — canvas-based floating particles themed per pathway using `var(--accent-color)`.
+- **Parallax Header** — header image scrolls slower than the page for a depth effect. Requires a JS scroll listener since CSS `background-attachment: fixed` is broken by `overflow: hidden` on ancestor elements.
+- **Plausible Analytics** — privacy-friendly visitor tracking. Will show per-pathway visit counts once an account is set up at plausible.io.
+- **Glowing hover effects** — accent-colored glow on cards and buttons for mouse users, complementing the existing focus ring for keyboard users.

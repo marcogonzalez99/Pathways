@@ -11,8 +11,8 @@ const { sections } = Astro.props
     <ul class="grid grid-cols-1 lg:grid-cols-3 gap-4 ml-4 mr-4">
         {sections.map((section, index) => (
             <li style={`animation-delay: ${index * 0.1}s`} class="hover:scale-120 hover:rotate-2 transition-transform duration-200 animate-[fade-up_0.4s_ease-out_both]">
-                <a href={section.link} target="_self" rel="noopener noreferrer" class="flex flex-wrap justify-center items-center space-x-2">
-                    <img src={section.icon} alt={section.text} title={section.text} class="w-12 h-12 rounded-full object-cover transition-all duration-200 mb-2"/>
+                <a href={section.link} target="_self" rel="noopener noreferrer" class="flex flex-wrap justify-center items-center space-x-2 rounded-xl">
+                    <img src={section.icon} alt={section.text} title={section.text} class="w-12 h-12 block rounded-full object-cover transition-all duration-200"/>
                     <span class="text-2xl font-semibold text-(--color-text-main)">{section.text}</span>
                 </a>
             </li>

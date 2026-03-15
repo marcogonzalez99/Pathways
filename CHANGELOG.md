@@ -4,6 +4,18 @@ All notable changes to Pathways will be documented here.
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-03-15
+
+### Added
+- `robots.txt` file to `public/` with basic crawl directives for search engines
+- `sitemap.xml` auto-generated at build time using `astro-sitemap` integration, listing all pages for improved SEO
+- Open Graph meta tags in `BaseLayout.astro` for better link sharing previews on social media platforms
+- `aria-label` attributes to all interactive elements (cards, social buttons, section links) for improved accessibility
+- lazy loading (`loading="lazy"`) on all non-critical images (cards, social icons) to optimize page load performance
+- eager loading (`loading="eager"`) on critical images (header and profile images) to ensure they load as soon as possible for better user experience
+- asynchronous decoding (`decoding="async"`) on all images to allow the browser to render other content while images are being decoded, improving overall page load performance
+- `accent_color` field in `PageData` interface to allow for pathway-specific accent colors used in focus rings and future design elements
+
 ## [1.1.0] - 2026-03-14
 
 ### Added
@@ -16,14 +28,10 @@ All notable changes to Pathways will be documented here.
 ### Removed
 - Unused `--color-bg-dark` CSS from `global.css`
 
----
-
 ## [1.0.0] - 2026-03-09
 
 ### Added
 - Card images to `public/images/cards/` (`apple_music.jpg`, `instagram.png`, `kofi.png`, `polaris.png`, `spotify.jpg`, `youtube.jpg`)
-
----
 
 ## [0.9.0] - 2026-03-08
 
@@ -54,8 +62,6 @@ All notable changes to Pathways will be documented here.
 ### Added
 - Dark Mode temporary toggle
 
-
----
 ## [0.6.0] - 2026-02-27
 
 ### Added
@@ -66,8 +72,6 @@ All notable changes to Pathways will be documented here.
 - `src/data/links.ts` | replaced flat `section_label`/`section_link` strings in `PageData` with `sections: Section[]`, customized `social_links` per page to reflect each account's actual platforms; customized `sections` per page so each page links to the other three and excludes itself
 - `LinkCard.astro` | Added `hover:scale-105` transition effect on card hover
 
----
-
 ## [0.5.0] - 2026-02-26
 
 ### Updated
@@ -75,8 +79,6 @@ All notable changes to Pathways will be documented here.
 - Cleaned up Final Design section; converted "Other Potential tabs" to a proper Roadmap section.
 - Added banner image at top
 - Merged and expanded "What is Pathways?" to cover both what and why; added Project Structure tree
-
----
 
 ## [0.4.0] - 2026-02-24
 
@@ -88,22 +90,17 @@ All notable changes to Pathways will be documented here.
 - `LinkCard.astro` - Implemented component: replaced flex layout with responsive CSS Grid (`grid-cols-1 lg:grid-cols-3`), made full card clickable via wrapping `<a>` tag, added text label bar at bottom of each card
 - `BaseLayout.astro` - Updated `LinkCard` usage to pass `cards={page.cards}`
 
----
-
 ## [0.3.0] - 2026-02-23
 
 ### Updated
 - `ProfileCard.astro` - Implemented full component: header image, circular profile image overlapping header, name, and tagline
 - `src/data/links.ts` - Populated `header_image` and `profile_image` paths for all four pages using correct root-relative `/images/` paths
 
----
-
 ## [0.2.0] - 2026-02-22
 
 ### Added
 - `BaseLayout.astro` - Shared layout component accepting a `PageData` prop, renders profile, social buttons, cards, and section link
 - `src/data/links.ts` - Typed interfaces (`PageData`, `Card`, `SocialLink`) and data stubs for all four pages (`indexData`, `shineburstData`, `polarisData`, `skyholdsData`)
-
 
 ## [0.1.0] - 2026-02-21
 

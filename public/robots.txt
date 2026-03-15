@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marcogonzalez99.github.io/Pathways/sitemap-index.xml

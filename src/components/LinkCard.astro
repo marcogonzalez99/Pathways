@@ -11,9 +11,9 @@ const { cards } = Astro.props
     <ul class="flex flex-wrap justify-center items-center gap-8">
         {cards.map((link, index) => (
             <li style={`animation-delay: ${index * 0.2}s`} class="hover:scale-105 hover:rotate-1 transition-transform duration-200 animate-[fade-up_0.4s_ease-out_both]">
-                <a href={link.link} target="_blank" rel="noopener noreferrer" class="hover:scale-105">
+                <a href={link.link} target="_blank" rel="noopener noreferrer" class="block rounded-4xl hover:scale-105">
                     <div>
-                        <img src={link.image} alt={link.alt} class="w-124 h-64 rounded-4xl object-cover"/>
+                        <img src={link.image} alt={link.alt} class="w-124 h-64 rounded-4xl object-cover" loading="lazy"/>
                     </div>
                     <div class="h-12 rounded-b-4xl flex items-center justify-center">
                         <p class="text-xl font-semibold text-(--color-text-main)">{link.text}</p>

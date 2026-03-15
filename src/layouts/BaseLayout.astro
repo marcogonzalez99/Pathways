@@ -17,24 +17,38 @@ const { page } = Astro.props
 
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="description" content={page.description}/>
-        <title>{page.name}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:site_name" content="Pathways"/>
+        <meta property="og:title" content={`${page.name} - ${page.tagline}`}/>
+        <meta property="og:description" content={page.description}/>
+        <meta property="og:image" content={new URL(page.header_image, Astro.url).href}/>
+        <meta property="og:url" content={Astro.url.href}/>
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content={`${page.name} - ${page.tagline}`}/>
+        <meta name="twitter:description" content={page.description}/>
+        <meta name="twitter:image" content={new URL(page.header_image, Astro.url).href}/>
+
+        <title>{page.name} - {page.tagline}</title>
+        <link rel="canonical" href={Astro.url.href} />
+        <link rel="icon" href="/favicon.ico"/>
         <ClientRouter />
         <script is:inline>
-            // Check local storage for theme 
-            if (localStorage.getItem('theme') === 'dark') {
+            const stored = localStorage.getItem('theme');
+            if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.classList.add('dark');
             } else {
                 document.documentElement.classList.remove('dark');
             }
-
         </script>
     </head>
 
-    <body class="bg-(--color-bg)" transition:animate="fade">
+    <body class="bg-(--color-bg)" style={`--accent-color: ${page.accent_color}`} transition:animate="fade">
         <ProfileCard profile_data={page}/>
         <SocialButtons social_links={page.social_links} />
         <LinkCard cards={page.cards} />

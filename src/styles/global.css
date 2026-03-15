@@ -23,6 +23,15 @@
 
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+  box-shadow: 
+    0 0 0 2px transparent,
+    0 0 0 4px var(--accent-color),
+    0 0 12px 4px var(--accent-color);
+}
+
 @keyframes fade-up {
     from {
         opacity: 0;
@@ -34,6 +43,9 @@
     }
 }
 
+/* @media (pointer: fine) {
+  html { cursor: url('/cursor.svg') 8 8, auto; }
+} */
 
 html {
   scroll-behavior: smooth;

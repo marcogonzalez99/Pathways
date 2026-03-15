@@ -23,6 +23,7 @@ export interface PageData {
     name: string
     tagline: string
     description: string
+    accent_color: string
     social_links: SocialLink[]
     cards: Card[]
     sections: Section[]
@@ -34,6 +35,7 @@ export const indexData: PageData = {
     name: "Marco Gonzalez",
     tagline: "Developer | Artist | Builder",
     description: "Welcome to my personal link page! Here you can find all of my projects and social media in one place. Feel free to explore and connect with me!",
+    accent_color: "#4A90D9",
     social_links: [
         {icon: 'github', link: 'https://github.com/marcogonzalez99', label: 'GitHub'},       
         {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez', label: 'Instagram'},
@@ -72,6 +74,7 @@ export const shineburstData: PageData = {
     name: "Shineburst",
     tagline: "Connecting Others Through Sound",
     description: "Shineburst is my music project where I create a blend of electronic and indie music. My goal is to connect with others through my sound and share my passion for music. Check out my latest releases and follow me on Spotify and Apple Music!",
+    accent_color: "#9B59B6",
     social_links: [
         {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez', label: 'Instagram'},
     ],
@@ -108,6 +111,7 @@ export const polarisData: PageData = {
     name: "Polaris Studios",
     tagline: "Imagination Going Beyond",
     description: "Polaris Studios is my game development project where I create games and a game engine called Polaris Kit. My goal is to bring imagination to life through interactive experiences. Check out my latest projects and follow me on YouTube for dev builds and updates!",
+    accent_color: "#F39C12",
     social_links: [
         {icon: 'github', link: 'https://github.com/marcogonzalez99', label: 'GitHub'},  
         {icon: 'instagram', link: 'https://www.instagram.com/sbstudios.project', label: 'Instagram'},     
@@ -145,6 +149,7 @@ export const skyholdsData: PageData = {
     name: "Sky Holds",
     tagline: "Always Reaching Higher",
     description: "Sky Holds is my climbing project where I document my climbing journey and share tips and tricks for climbers of all levels. My goal is to inspire others to reach new heights and push their limits. Check out my latest climbs and follow me on Instagram for updates!",
+    accent_color: "#27AE60",
     social_links: [
         {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez', label: 'Instagram'},
     ],
