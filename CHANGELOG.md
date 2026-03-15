@@ -4,6 +4,11 @@ All notable changes to Pathways will be documented here.
 
 ## [Unreleased]
 
+## [1.2.1] - 2026-03-15
+
+### Added
+- Built by Nebulabs footer
+
 ## [1.2.0] - 2026-03-15
 
 ### Added
