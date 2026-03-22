@@ -21,6 +21,7 @@ const { page } = Astro.props
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="description" content={page.description}/>
+        <meta name="theme-color" content={page.accent_color}/>
         <!-- Open Graph Meta Tags -->
         <meta property="og:type" content="website"/>
         <meta property="og:site_name" content="Pathways"/>
@@ -28,7 +29,6 @@ const { page } = Astro.props
         <meta property="og:description" content={page.description}/>
         <meta property="og:image" content={new URL(page.header_image, Astro.url).href}/>
         <meta property="og:url" content={Astro.url.href}/>
-
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:title" content={`${page.name} - ${page.tagline}`}/>
@@ -38,6 +38,8 @@ const { page } = Astro.props
         <title>{page.name} - {page.tagline}</title>
         <link rel="canonical" href={Astro.url.href} />
         <link rel="icon" href="/favicon.ico"/>
+        <link rel="preload" as="image" href={page.header_image}/>
+        <link rel="preload" as="image" href={page.profile_image}/>
         <ClientRouter />
         <script is:inline>
             const stored = localStorage.getItem('theme');
@@ -62,8 +64,15 @@ const { page } = Astro.props
 <script>
     const toggleDarkMode = () => {
         const isDarkMode = document.documentElement.classList.contains('dark');
-        document.documentElement.classList.toggle('dark', !isDarkMode);
-        localStorage.setItem('theme', isDarkMode ? 'light' : 'dark');
+        const apply = () => {
+            document.documentElement.classList.toggle('dark', !isDarkMode);
+            localStorage.setItem('theme', isDarkMode ? 'light' : 'dark');
+        };
+        if (document.startViewTransition) {
+            document.startViewTransition(apply);
+        } else {
+            apply();
+        }
     };
 
     document.addEventListener('astro:page-load', () => {

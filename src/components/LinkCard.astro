@@ -1,6 +1,5 @@
 ---
 import type { Card } from "../data/links"
-import "../styles/global.css"
 
 interface Props {
     cards: Card[]
@@ -10,8 +9,8 @@ const { cards } = Astro.props
 <div class="mt-2 p-4">
     <ul class="flex flex-wrap justify-center items-center gap-8">
         {cards.map((link, index) => (
-            <li style={`animation-delay: ${index * 0.2}s`} class="hover:scale-105 hover:rotate-1 transition-transform duration-200 animate-[fade-up_0.4s_ease-out_both]">
-                <a href={link.link} target="_blank" rel="noopener noreferrer" class="block rounded-4xl hover:scale-105">
+            <li style={`animation-delay: ${1.1 + index * 0.15}s`} class="hover:scale-105 hover:rotate-1 transition-transform duration-200 animate-[fade-up_0.4s_ease-out_both]">
+                <a href={link.link} target="_blank" rel="noopener noreferrer" class="block rounded-4xl">
                     <div>
                         <img src={link.image} alt={link.alt} class="w-124 h-64 rounded-4xl object-cover" loading="lazy"/>
                     </div>

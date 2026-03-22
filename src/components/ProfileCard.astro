@@ -1,6 +1,5 @@
 ---
 import type { PageData } from "../data/links"
-import "../styles/global.css"
 
 interface Props { 
     profile_data: PageData 
@@ -10,15 +9,15 @@ const { profile_data } = Astro.props
 
 <div class="relative">
   <div class="h-56 overflow-hidden">
-    <img src={profile_data.header_image} transition:name="header-image" alt="Header Image" class="w-full h-full object-cover" loading="eager" decoding="async"/>
+    <img src={profile_data.header_image} transition:name="header-image" alt="Header Image" class="w-full h-full object-cover animate-[hero-reveal_0.8s_ease-out_both]" loading="eager" decoding="async"/>
   </div>
   <div class="absolute bottom-10 left-1/2 -translate-x-1/2 translate-y-1/2 z-10">
-    <img src={profile_data.profile_image} transition:name="profile-image" alt="Profile Image" class="w-48 h-48 rounded-full border-4 border-(--color-profile-border) object-cover" loading="eager" decoding="async"/>
+    <img src={profile_data.profile_image} transition:name="profile-image" alt="Profile Image" class="w-48 h-48 rounded-full border-4 border-(--color-profile-border) object-cover animate-[fade-up_0.5s_ease-out_both]" style="animation-delay: 0.3s" loading="eager" decoding="async"/>
   </div>
 </div>
 <div class="text-center mt-14 px-4 pb-2">
   <span class="flex items-center justify-center space-x-4">
-    <h1 class="text-6xl font-bold text-(--color-text-main)">{profile_data.name}</h1>
+    <h1 class="text-6xl font-bold text-(--color-text-main) animate-[fade-up_0.4s_ease-out_both]" style="animation-delay: 0.55s">{profile_data.name}</h1>
   </span>
-  <p class="mt-1 text-xl text-(--color-text-secondary)">{profile_data.tagline}</p>
+  <p class="mt-1 text-xl text-(--color-text-secondary) animate-[fade-up_0.4s_ease-out_both]" style="animation-delay: 0.65s">{profile_data.tagline}</p>
 </div>

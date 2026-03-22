@@ -1,33 +1,4 @@
-export interface SocialLink {
-    icon: string
-    link: string
-    label: string
-}
-
-export interface Card {
-    image: string
-    text: string
-    alt: string
-    link: string
-}
-
-export interface Section {
-    icon: string
-    text: string
-    link: string
-}
-
-export interface PageData {
-    header_image: string
-    profile_image: string
-    name: string
-    tagline: string
-    description: string
-    accent_color: string
-    social_links: SocialLink[]
-    cards: Card[]
-    sections: Section[]
-}
+import type { PageData } from "../data/types"
 
 export const indexData: PageData = {    
     header_image: "/images/headers/main_profile_header.jpg",
@@ -161,13 +132,13 @@ export const skyholdsData: PageData = {
             link: "https://www.youtube.com/@SkyHoldsYT/shorts"
         },
         {    
-            image: "/images/cards/instagram.png",
+            image: "/images/cards/youtube.jpg",
             text: "Watch My First V7!",
             alt: "Sky Holds V7 Climb",
             link: "https://www.youtube.com/shorts/N1xXPxFUowQ"
         },
         {    
-            image: "/images/cards/instagram.png",
+            image: "/images/cards/youtube.jpg",
             text: "Random Climb!",
             alt: "Sky Holds Random Short",
             link: "https://www.youtube.com/shorts/GtADGUb_SKo"

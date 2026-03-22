@@ -4,6 +4,26 @@ All notable changes to Pathways will be documented here.
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-03-21
+
+### Added
+- `src/data/types.ts` extracted all TypeScript interfaces (`SocialLink`, `Card`, `Section`, `PageData`) out of `links.ts` into a dedicated types file
+- `theme-color` meta tag in `BaseLayout.astro` using `accent_color` per page for browser UI theming
+- `<link rel="preload">` for header and profile images in `BaseLayout.astro`
+- `@keyframes hero-reveal` in `global.css` for the header image scale-in animation
+- View Transition duration and easing (`0.4s ease`) for page-to-page navigation in `global.css`
+
+### Updated
+- Dark mode toggle now uses `document.startViewTransition()` for an animated theme switch instead of an instant class swap
+- `--color-text-secondary` in light mode corrected to `#5a5e63`
+- `--color-profile-border` in dark mode updated to `#a8adb3`
+- `src/data/links.ts` now imports types from `../data/types` instead of defining them inline
+
+### Removed
+- TypeScript interfaces removed from `links.ts` (moved to `types.ts`)
+- `public/cursor.svg` custom cursor removed
+- `public/images/cards/shineburst_card.jpg` unused card removed
+
 ## [1.2.1] - 2026-03-15
 
 ### Added

@@ -9,13 +9,13 @@
   --color-profile-border: #F2F0EF;
 
   --color-text-main: #212326;
-  --color-text-secondary: #212326;
+  --color-text-secondary: #5a5e63;
   --color-ring-hover: #323841;
 }
 
 :root.dark {
   --color-bg: #212326;
-  --color-profile-border: #212326;
+  --color-profile-border: #a8adb3;
   
   --color-text-main: #F2F0EF;
   --color-text-secondary: #F2F0EF;
@@ -43,12 +43,25 @@ button:focus-visible {
     }
 }
 
-/* @media (pointer: fine) {
-  html { cursor: url('/cursor.svg') 8 8, auto; }
-} */
+@keyframes hero-reveal {
+    from {
+        opacity: 0;
+        transform: scale(1.06);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 html {
   scroll-behavior: smooth;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.4s;
+  animation-timing-function: ease;
 }
 
 * {
