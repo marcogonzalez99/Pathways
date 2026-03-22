@@ -4,6 +4,19 @@ All notable changes to Pathways will be documented here.
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-03-21
+
+### Added
+- `src/components/NotFound.astro` custom 404 page component and a back-to-home button
+- `src/pages/404.astro` dedicated 404 page using `NotFound` component 
+- SVG sun and moon icons from Heroicons in `DarkMode.astro`, replacing emoji with proper scalable icons
+- `D` keyboard shortcut to toggle dark mode
+- `tags` optional field on `Card` interface in `types.ts` for per-card pill labels
+- Tag pills rendered in `LinkCard.astro` using `?.map()`
+
+### Updated
+- `DarkMode.astro` emojis replaced with inline Heroicon SVGs
+
 ## [1.3.0] - 2026-03-21
 
 ### Added

@@ -9,6 +9,7 @@ export interface Card {
     text: string
     alt: string
     link: string
+    tags?: string[]
 }
 
 export interface Section {

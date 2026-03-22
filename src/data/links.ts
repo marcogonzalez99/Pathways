@@ -17,7 +17,8 @@ export const indexData: PageData = {
             image: "/images/cards/apple_music.jpg",
             text: "Listen to my Music!",
             alt: "Shineburst on Apple Music",
-            link: "https://music.apple.com/us/artist/shineburst/1559045496"
+            link: "https://music.apple.com/us/artist/shineburst/1559045496",
+            tags: ['Music']
         },
         {    
             image: "/images/cards/polaris.png",

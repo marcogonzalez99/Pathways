@@ -1,5 +1,5 @@
 ---
-import type { Card } from "../data/links"
+import type { Card } from "../data/types"
 
 interface Props {
     cards: Card[]
@@ -14,7 +14,12 @@ const { cards } = Astro.props
                     <div>
                         <img src={link.image} alt={link.alt} class="w-124 h-64 rounded-4xl object-cover" loading="lazy"/>
                     </div>
-                    <div class="h-12 rounded-b-4xl flex items-center justify-center">
+                    <div class="flex items-center justify-center mt-1">
+                        {link.tags?.map((tag) => (
+                            <span class="inline-flex items-center rounded-md bg-(--accent-color) px-2 py-1 text-xs font-medium text-(--color-text-main) inset-ring inset-(--accent-color) opacity-50">{tag}</span>
+                        ))}
+                    </div>
+                    <div class="h-8 rounded-b-4xl flex items-center justify-center">
                         <p class="text-xl font-semibold text-(--color-text-main)">{link.text}</p>
                     </div>
                 </a>

@@ -5,8 +5,8 @@
 /* Color Schemes */
 :root {
   color-scheme: light dark;
-  --color-bg: #F2F0EF;
-  --color-profile-border: #F2F0EF;
+  --color-bg: #e8e2df;
+  --color-profile-border: #e8e2df;
 
   --color-text-main: #212326;
   --color-text-secondary: #5a5e63;
@@ -17,8 +17,8 @@
   --color-bg: #212326;
   --color-profile-border: #a8adb3;
   
-  --color-text-main: #F2F0EF;
-  --color-text-secondary: #F2F0EF;
+  --color-text-main: #e8e2df;
+  --color-text-secondary: #e8e2df;
   --color-ring-hover: #323841;
 
 }

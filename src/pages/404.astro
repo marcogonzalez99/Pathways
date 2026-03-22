@@ -1,0 +1,63 @@
+---
+import DarkMode from '../components/DarkMode.astro'
+import Footer from '../components/Footer.astro'
+import NotFound from '../components/NotFound.astro'
+
+import { ClientRouter } from "astro:transitions";
+
+import '../styles/global.css'
+
+---
+
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon" href="/favicon.ico"/>
+        <ClientRouter />
+        <script is:inline>
+            const stored = localStorage.getItem('theme');
+            if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        </script>
+    </head>
+    <body style="background:var(--color-bg); min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1.5rem;">
+        <DarkMode />
+        <NotFound />
+        <Footer />
+    </body>
+</html>
+
+<script>
+    const toggleDarkMode = () => {
+        const isDarkMode = document.documentElement.classList.contains('dark');
+        const apply = () => {
+            document.documentElement.classList.toggle('dark', !isDarkMode);
+            localStorage.setItem('theme', isDarkMode ? 'light' : 'dark');
+        };
+        if (document.startViewTransition) {
+            document.startViewTransition(apply);
+        } else {
+            apply();
+        }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === "d") {
+            toggleDarkMode();
+        }
+    };
+
+    document.addEventListener('astro:page-load', () => {
+        const btn = document.getElementById('theme-toggle');
+        btn?.removeEventListener('click', toggleDarkMode);
+        btn?.addEventListener('click', toggleDarkMode);
+
+        document.removeEventListener('keydown', handleKeyDown)
+        document.addEventListener('keydown', handleKeyDown)
+
+    });
+</script>

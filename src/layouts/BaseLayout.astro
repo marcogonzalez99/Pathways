@@ -1,5 +1,5 @@
 ---
-import type { PageData } from '../data/links'
+import type { PageData } from '../data/types'
 
 import ProfileCard from '../components/ProfileCard.astro'
 import SocialButtons from '../components/SocialButtons.astro'
@@ -75,9 +75,19 @@ const { page } = Astro.props
         }
     };
 
+    const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === "d") {
+            toggleDarkMode();
+        }
+    };
+
     document.addEventListener('astro:page-load', () => {
         const btn = document.getElementById('theme-toggle');
         btn?.removeEventListener('click', toggleDarkMode);
         btn?.addEventListener('click', toggleDarkMode);
+
+        document.removeEventListener('keydown', handleKeyDown)
+        document.addEventListener('keydown', handleKeyDown)
+
     });
 </script>
