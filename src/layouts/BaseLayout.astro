@@ -42,12 +42,16 @@ const { page } = Astro.props
         <link rel="preload" as="image" href={page.profile_image}/>
         <ClientRouter />
         <script is:inline>
-            const stored = localStorage.getItem('theme');
-            if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
+            function applyTheme() {
+                const stored = localStorage.getItem('theme');
+                if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                }
             }
+            applyTheme();
+            document.addEventListener('astro:after-swap', applyTheme);
         </script>
     </head>
 

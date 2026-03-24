@@ -11,8 +11,8 @@ const { profile_data } = Astro.props
   <div class="h-56 overflow-hidden">
     <img src={profile_data.header_image} transition:name="header-image" alt="Header Image" class="w-full h-full object-cover animate-[hero-reveal_0.8s_ease-out_both]" loading="eager" decoding="async"/>
   </div>
-  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 translate-y-1/2 z-10">
-    <img src={profile_data.profile_image} transition:name="profile-image" alt="Profile Image" class="w-48 h-48 rounded-full border-4 border-(--color-profile-border) object-cover animate-[fade-up_0.5s_ease-out_both]" style="animation-delay: 0.3s" loading="eager" decoding="async"/>
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 translate-y-1/2 z-10 hover:scale-105 hover:rotate-4 transition-transform duration-200">
+    <img src={profile_data.profile_image} transition:name="profile-image" alt="Profile Image" class="w-48 h-48 rounded-full border-4 border-(--color-profile-border) object-cover shadow-xl shadow-black/40 animate-[fade-up_0.5s_ease-out_both]" style="animation-delay: 0.3s;" loading="eager" decoding="async"/>
   </div>
 </div>
 <div class="text-center mt-14 px-4 pb-2">
