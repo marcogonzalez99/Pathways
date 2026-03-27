@@ -2,7 +2,12 @@
 
 All notable changes to Pathways will be documented here.
 
-## [Unreleased]
+## [LIVE]
+
+## [1.5.0] - 2026-03-26
+
+### Added
+- `src/components/Particles.astro` canvas-based animated particle background using `--accent-color` per pathway, with reduced motion support and resize handling
 
 ## [1.4.0] - 2026-03-21
 

@@ -6,6 +6,7 @@ import SocialButtons from '../components/SocialButtons.astro'
 import LinkCard from '../components/LinkCard.astro'
 import Sections from '../components/Sections.astro'
 import DarkMode from '../components/DarkMode.astro'
+import Particles from '../components/Particles.astro'
 import Footer from '../components/Footer.astro'
 
 import '../styles/global.css'
@@ -56,6 +57,7 @@ const { page } = Astro.props
     </head>
 
     <body class="bg-(--color-bg)" style={`--accent-color: ${page.accent_color}`} transition:animate="fade">
+        <Particles />
         <ProfileCard profile_data={page}/>
         <SocialButtons social_links={page.social_links} />
         <LinkCard cards={page.cards} />

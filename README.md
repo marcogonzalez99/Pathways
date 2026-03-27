@@ -11,14 +11,16 @@ It's a simple, minimal site where you can find all the important links I want to
 ## ✨ Features
 
 - Responsive layout with mobile-first design
-- Dark and light theme toggle
+- Dark and light theme toggle with animated transition (`D` keyboard shortcut)
 - Dedicated pathway pages per identity (Personal, Music, Bouldering, Game Dev)
-- Highlight cards showcasing a featured project per pathway
-- Link data driven by a typed TypeScript data file — no hardcoding required
+- Highlight cards with optional tag pills per pathway
+- Canvas-based animated particle background themed per pathway using `--accent-color`
+- Custom 404 page
+- Link data driven by typed TypeScript interfaces — no hardcoding required
 
-<!-- ## 🚀 Live Site
+## 🚀 Live Site
 
-Live Site link will go here once it's ready -->
+[Live Site link!](https://pathways-psi.vercel.app/)
 
 ## 🗂️ Project Structure
 
@@ -27,11 +29,14 @@ src/
 ├── components/
 │   ├── DarkMode.astro
 │   ├── LinkCard.astro
+│   ├── NotFound.astro
+│   ├── Particles.astro
 │   ├── ProfileCard.astro
 │   ├── Sections.astro
 │   └── SocialButtons.astro
 ├── data/
-│   └── links.ts
+│   ├── links.ts
+│   └── types.ts
 ├── layouts/
 │   └── BaseLayout.astro
 ├── pages/
@@ -150,10 +155,17 @@ Potential future pathways to add:
 - **`loading="eager"`** - The hero image and the profile image are set to eager load, meaining they will load as soon as possible. This is important for these two images as they are guarenteed to be in the viewport as soon as the page loads.
 - **`decoding="async"`** - Image decoding is set to async, which allows a browser to render other content while the image is being decoded, improving page load performance.
 
+### Canvas & Animation
+- **`<canvas>`** A raw HTML drawing surface. You draw every frame manually using the 2D context (`getContext('2d')`).
+- **`requestAnimationFrame`** The browser-native way to run a loop at ~60fps. It syncs with the screen's refresh rate and pauses automatically when the tab is hidden
+- **`cancelAnimationFrame`** Without this, navigating to a new page starts a second loop while the first one is still running, doubling particle count each navigation.
+- **`prefers-reduced-motion`** A media query that follows the user's OS accessibility setting.
+- **`pointer-events: none`** Applied to the canvas so it sits behind everything but never intercepts mouse clicks or touch events from the actual page content.
+
 ## 📋 Future TODOs
 
 - **Custom Cursor** — a two-layer JS cursor: small dot that snaps instantly + larger ring that follows with lag, themed with `var(--accent-color)` per pathway.
-- **Particle Background** — canvas-based floating particles themed per pathway using `var(--accent-color)`.
+- ~~**Particle Background** — canvas-based floating particles themed per pathway using `var(--accent-color)`.~~ ✅ Done
 - **Parallax Header** — header image scrolls slower than the page for a depth effect. Requires a JS scroll listener since CSS `background-attachment: fixed` is broken by `overflow: hidden` on ancestor elements.
 - **Plausible Analytics** — privacy-friendly visitor tracking. Will show per-pathway visit counts once an account is set up at plausible.io.
 - **Glowing hover effects** — accent-colored glow on cards and buttons for mouse users, complementing the existing focus ring for keyboard users.

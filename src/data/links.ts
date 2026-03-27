@@ -48,7 +48,7 @@ export const shineburstData: PageData = {
     description: "Shineburst is my music project where I create a blend of electronic and indie music. My goal is to connect with others through my sound and share my passion for music. Check out my latest releases and follow me on Spotify and Apple Music!",
     accent_color: "#9B59B6",
     social_links: [
-        {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez', label: 'Instagram'},
+        {icon: 'instagram', link: 'https://www.instagram.com/shineburstmusic', label: 'Instagram'},
     ],
     cards: [
         {    
@@ -123,7 +123,7 @@ export const skyholdsData: PageData = {
     description: "Sky Holds is my climbing project where I document my climbing journey and share tips and tricks for climbers of all levels. My goal is to inspire others to reach new heights and push their limits. Check out my latest climbs and follow me on Instagram for updates!",
     accent_color: "#27AE60",
     social_links: [
-        {icon: 'instagram', link: 'https://www.instagram.com/_marcogonzalez', label: 'Instagram'},
+        {icon: 'instagram', link: 'https://www.instagram.com/sky.holds', label: 'Instagram'},
     ],
     cards: [
         {    
