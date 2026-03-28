@@ -132,18 +132,6 @@ export const skyholdsData: PageData = {
             alt: "Sky Holds Youtube Page",
             link: "https://www.youtube.com/@SkyHoldsYT/shorts"
         },
-        {    
-            image: "/images/cards/youtube.jpg",
-            text: "Watch My First V7!",
-            alt: "Sky Holds V7 Climb",
-            link: "https://www.youtube.com/shorts/N1xXPxFUowQ"
-        },
-        {    
-            image: "/images/cards/youtube.jpg",
-            text: "Random Climb!",
-            alt: "Sky Holds Random Short",
-            link: "https://www.youtube.com/shorts/GtADGUb_SKo"
-        },
     ],
     sections: [
         {icon:"/images/logos/main_logo.png", text: "Personal", link: "/"},

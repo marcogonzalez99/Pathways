@@ -4,6 +4,11 @@ All notable changes to Pathways will be documented here.
 
 ## [LIVE]
 
+## [1.6.0] - 2026-03-28
+
+### Added
+- `Analytics` Vercel based package to track website visits
+
 ## [1.5.0] - 2026-03-26
 
 ### Added
