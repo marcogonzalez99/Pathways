@@ -169,3 +169,6 @@ Potential future pathways to add:
 - **Parallax Header** — header image scrolls slower than the page for a depth effect. Requires a JS scroll listener since CSS `background-attachment: fixed` is broken by `overflow: hidden` on ancestor elements.
 - **Plausible Analytics** — privacy-friendly visitor tracking. Will show per-pathway visit counts once an account is set up at plausible.io.
 - **Glowing hover effects** — accent-colored glow on cards and buttons for mouse users, complementing the existing focus ring for keyboard users.
+
+## Analytics
+- March 2026 (83 Visits)
